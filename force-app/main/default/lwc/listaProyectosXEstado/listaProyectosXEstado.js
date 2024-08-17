@@ -36,6 +36,3 @@ export default class ListaProyectosXEstado extends LightningElement {
         this.selectedEstado = event.detail.value;
     }
 }
-
-
-
