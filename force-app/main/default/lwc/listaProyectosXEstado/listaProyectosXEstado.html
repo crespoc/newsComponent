@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Lista de Proyectos" icon-name="standard:action_list_component">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="estadoFilter"
+                label="Filtrar por Estado"
+                value={selectedEstado}
+                placeholder="Seleccionar un Estado"
+                options={estadoOptions}
+                onchange={handleEstadoChange}
+            ></lightning-combobox>
+        </div>
+        <lightning-datatable
+            key-field="id"
+            data={estados}
+            columns={columns}
+            hide-checkbox-column
+        >
+        </lightning-datatable>
+    </lightning-card>
+</template>

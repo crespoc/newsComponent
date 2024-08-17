@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Lista de Cuentas">
+        <!-- Filtro por industria -->
+        <lightning-combobox
+            label="Filtrar por Industria"
+            value={selectedIndustry}
+            options={industryOptions}
+            onchange={handleIndustryChange}>
+        </lightning-combobox>
+
+        <!-- Lista de cuentas -->
+        <template if:true={accounts}>
+            <lightning-datatable
+                key-field="Id"
+                data={filteredAccounts}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

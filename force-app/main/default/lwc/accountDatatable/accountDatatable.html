@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Accounts Data Table" icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="industryFilter"
+                label="Filter by Industry"
+                value={selectedIndustry}
+                placeholder="Select an Industry"
+                options={industryOptions}
+                onchange={handleIndustryChange}
+            ></lightning-combobox>
+        </div>
+        <lightning-datatable
+            key-field="id"
+            data={accounts}
+            columns={columns}
+            hide-checkbox-column
+        >
+        </lightning-datatable>
+    </lightning-card>
+</template>
+

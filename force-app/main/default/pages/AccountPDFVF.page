@@ -1,0 +1,11 @@
+<apex:page renderAs="pdf" controller="AccountPDFController">
+    <apex:form>
+        <apex:pageBlock title="Account Information">
+            <apex:pageBlockSection columns="1">
+                <apex:outputField value="{!account.Name}" label="Account Name"/>
+                <apex:outputField value="{!account.Industry}" label="Industry"/>
+                <apex:outputField value="{!account.Phone}" label="Phone"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="pdfUrl" type="String"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <lightning:button label="Show PDF" onclick="{!c.showPDFModal}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:method name="showPDF" action="{!c.showPDF}">
+        <aura:attribute name="recordId" type="Id"/>
+    </aura:method>
+</aura:component>
